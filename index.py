@@ -11,20 +11,6 @@ if umur > 10:
 else:
   print(name[1] + " anda berjiwa muda")
 
-listPerson = [
-  {
-  "name": "Gival",
-  "cash": 1000,
-  "cool": True
-  },
-  {
-  "name": "chino",
-  "cash": 1500,
-  "cool": True
-  },
-]
-print(listPerson[0]["name"])
-
 phone_name, phone_ram, phone_lcd = "redmi", "grey", "amoled"
 player1, player2, player3 = name
 
@@ -70,3 +56,77 @@ del name[0]
 cash.clear()
 print(cash)
 print(name)
+
+print("---")
+
+color = ["blue", "red", "cyan", "yellow"]
+for i in range(len(color)):
+  print(color[i])
+
+print("---")
+
+[print(x) for x in color]
+
+print("---")
+
+newColor = [i.upper() for i in color if i != "yellow"]
+newColor.sort(reverse=True)
+print(newColor)
+
+secondColor = newColor.copy()
+print(secondColor)
+
+secondColor.extend(color)
+print(secondColor)
+
+print("---")
+
+mytuple = ("apple", "banana", "cherry")
+yourtuple = ("manggo",)
+mytuple += yourtuple
+print(mytuple)
+
+(apple, banana, cherry, manggo) = mytuple
+print(apple)
+
+print("---")
+
+thisset = {"apple", "banana", "cherry", "apple"}
+leght = {"long", "sort"}
+thisset.add("starfruit")
+thisset.update(leght)
+print(thisset)
+thisset.discard("banana")
+print(thisset)
+secondset = {"high", "low", "mid"}
+newset = thisset.union(leght, secondset)
+print(newset)
+
+print("---")
+
+listPerson = [
+  {
+  "name": "Gival",
+  "cash": 1000,
+  "cool": True
+  },
+  {
+  "name": "chino",
+  "cash": 1500,
+  "cool": True
+  },
+]
+
+listPerson[0].update({"cool": False})
+listPerson[1].update({"pretty": True})
+listPerson[1].pop("cool")
+
+for x in listPerson:
+  print(x)
+
+myFamily = {
+  "family": listPerson,
+}
+print(myFamily)
+
+print("---")
