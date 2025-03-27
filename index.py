@@ -130,3 +130,55 @@ myFamily = {
 print(myFamily)
 
 print("---")
+
+a, b = 1, 5
+if a > b: print("yes")
+else: print("no")
+
+print("a") if a > b else print("b")
+
+print("---")
+
+while a <= 10:
+  print(a)
+  a += 1
+else:
+  print("i more than 10")
+
+print("---")
+
+for x in "yahahai":
+  print(x)
+else:
+  print("yahahai is end")
+
+print("---")
+
+def sayHello(*subject):
+  print("hallo " + subject[0])
+
+sayHello("python", "world" )
+
+def sayRole(**role):
+  print("hey there are officer " + role["police"])
+
+sayRole(police = "jeb", teacher = "elsa")
+
+def calculation(x, y, operation):
+  if operation == "+":
+    return x + y
+  elif operation == "-":
+    return x - y
+  elif operation == "*":
+    return x * y
+  elif operation == "/":
+    return x / y
+  else:
+    return "operation failed"
+
+print(calculation(5, 6, "/"))
+
+print("---")
+
+myCash = lambda x : x * 3
+print(myCash(6))
