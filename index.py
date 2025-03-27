@@ -313,3 +313,7 @@ print("---")
 
 username = input("Masukan username:")
 print("Terimakasih " + username + " sudah menjalankan file belajar python dasar milik saya")
+
+print("---")
+
+print("chapter belajar dasar python tamat!")
