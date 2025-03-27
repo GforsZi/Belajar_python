@@ -182,3 +182,68 @@ print("---")
 
 myCash = lambda x : x * 3
 print(myCash(6))
+
+print("---")
+
+class person:
+
+  def __init__(self, name, age, job):
+    self.name = name
+    self.age = age
+    self.job = job
+  
+  def __str__(self):
+    return f"Name: {self.name}, Age: ({self.age}), Major: {self.job}"
+
+  def sayHello(self):
+    print("Hallo my name is " + self.name)
+
+c1 = person("Gival", 17, "Web developer")
+c1.sayHello()
+print(c1)
+
+print("---")
+
+class friend(person):
+  def introduce(self):
+    print("Hallo saya " + self.name + "Salam kenal")
+
+c2 = friend("chino", 13, "barista")
+c2.sayHello()
+c2.introduce()
+print(c2)
+
+print("---")
+
+myiter = iter(mytuple)
+print(next(myiter))
+
+class numberOfCash:
+  def __iter__(self):
+    self.a = 1
+    return self
+
+  def __next__(self):
+    if self.a <= 5:
+      x = self.a
+      self.a += 1
+      return x
+    else:
+      raise StopIteration
+
+c3 =numberOfCash()
+numberIter = iter(c3)
+print(next(numberIter))
+
+for x in numberIter:
+  print(x)
+
+print("---")
+
+print(len(c2.name))
+
+class partner(person):
+  pass
+
+c4 = partner("zblazer", 12, "gamer")
+c4.sayHello()
