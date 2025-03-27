@@ -1,5 +1,12 @@
 import sys
 import random
+import myModule
+import datetime
+import platform
+import math
+import json
+import re
+
 
 print(sys.version)
 
@@ -247,3 +254,62 @@ class partner(person):
 
 c4 = partner("zblazer", 12, "gamer")
 c4.sayHello()
+
+print("---")
+
+myModule.sayMyName("Givaldi")
+
+os = platform.system()
+print(os)
+
+print(datetime.datetime.now().strftime("%A"))
+
+print(datetime.datetime(2020, 10, 5).strftime("%B"))
+
+print("---")
+
+print(min(5, 10, 25))
+print(max(5, 10, 25))
+print(abs(-7.25))
+print(pow(4, 3))
+print(math.sqrt(64))
+print(math.ceil(1.4))
+print(math.floor(1.4))
+print(math.pi)
+
+print("---")
+
+obj_str = '{ "name":"Chino", "age":13}'
+myjson = json.loads(obj_str)
+print(myjson["name"])
+
+print(json.dumps(myjson))
+
+print("---")
+
+txt = "The rain in Spain"
+search = re.search("^The.*Spain$", txt) 
+print(type(search))
+
+print("---")
+
+def writeToPaper(text):
+  try:
+    f = open("paper.txt", "a")
+    f.write("")
+    try:
+      f.write(text)
+      print(f"{text} sudah berhasil di tulis ke paper.txt")
+    except:
+      print("format text tidak valid")
+    finally:
+      f.close()
+  except:
+    print("terjadi kesalahan pada system") 
+
+writeToPaper(" akhirnya menamatkan python dasar! ")
+
+print("---")
+
+username = input("Masukan username:")
+print("Terimakasih " + username + " sudah menjalankan file belajar python dasar milik saya")
